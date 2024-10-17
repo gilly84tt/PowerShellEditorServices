@@ -39,7 +39,7 @@ internal class StackTraceHandler(DebugService debugService) : IStackTraceHandler
 
         StackFrame breakpointLabel = CreateBreakpointLabel(invocationInfo);
 
-        if (skip == 0 && take == 1) // This indicates the client is doing an initial fetch, so we want to return quickly to unblock the UI and wait on the remaining stack frames for the susequent requests.
+        if (skip == 0 && take == 1) // This indicates the client is doing an initial fetch, so we want to return quickly to unblock the UI and wait on the remaining stack frames for the subsequent requests.
         {
             return new StackTraceResponse()
             {
